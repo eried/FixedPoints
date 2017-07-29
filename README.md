@@ -71,16 +71,16 @@ The common aliases are provided by `FixedPointsCommon.h`.
 
 ### Operators:
 
-- `+`: adds two `UFixedPoint`s or two `FixedPoint`s
-- `-`: subtracts two `UFixedPoint`s or two `FixedPoint`s
-- `*`: multiplies two `UFixedPoint`s or two `FixedPoint`s
-- `/`: divides two `UFixedPoint`s or two `FixedPoint`s
-- `==`: compares two `UFixedPoint`s or two `FixedPoint`s
-- `!=`: compares two `UFixedPoint`s or two `FixedPoint`s
-- `<`: compares two `UFixedPoint`s or two `FixedPoint`s
-- `<=`: compares two `UFixedPoint`s or two `FixedPoint`s
-- `>`: compares two `UFixedPoint`s or two `FixedPoint`s
-- `>=`: compares two `UFixedPoint`s or two `FixedPoint`s
+- `+`: Adds two `UFixedPoint`s or two `FixedPoint`s
+- `-`: Subtracts two `UFixedPoint`s or two `FixedPoint`s
+- `*`: Multiplies two `UFixedPoint`s or two `FixedPoint`s
+- `/`: Divides two `UFixedPoint`s or two `FixedPoint`s
+- `==`: Compares two `UFixedPoint`s or two `FixedPoint`s
+- `!=`: Compares two `UFixedPoint`s or two `FixedPoint`s
+- `<`: Compares two `UFixedPoint`s or two `FixedPoint`s
+- `<=`: Compares two `UFixedPoint`s or two `FixedPoint`s
+- `>`: Compares two `UFixedPoint`s or two `FixedPoint`s
+- `>=`: Compares two `UFixedPoint`s or two `FixedPoint`s
 
 ### Free Functions:
 
@@ -88,7 +88,7 @@ The common aliases are provided by `FixedPointsCommon.h`.
 - `Ceil`: The Ceiling operation
 - `Round`: Rounding operation.
 - `Signbit`: Returns `true` for signed numbers and `false` for unsigned numbers.
-- `Multiply`: multiplies two `UFixedPoint`s or two `FixedPoint`s, returns a result that is twice the resolution of the input.
+- `Multiply`: Multiplies two `UFixedPoint`s or two `FixedPoint`s, returns a result that is twice the resolution of the input.
 
 ### Member Functions:
 
