@@ -1,12 +1,16 @@
 # FixedPoints
 A portable fixed point arithmetic library.
+
 Some knowledge of how fixed point types are formatted is required to used this library to full effect.
 No knowledge of how these operations are implemented is required to use them.
 
+This library was written with Arduino in mind, as well as CPUs with limited floating point support.
+However, given the templated nature of the library, it should still function on a wide variety of CPUs.
+
 ## Requirements:
 
-- Compiler must be C++11 compliant.
-- The user must be familar with [Q format](https://en.wikipedia.org/wiki/Q_(number_format)).
+- The Compiler must be C++11 compliant.
+- The user should ideally be familar with the [Q number format](https://en.wikipedia.org/wiki/Q_(number_format)) for fixed points.
 
 ## Licence
 
@@ -16,13 +20,23 @@ This means:
 - This code comes with no warranty.
 - The licensor and any contributors cannot be held liable for damages.
 - If you use this code, edited or unedited, you must:
--- Package a copy of LICENCE with your code.
--- Package a copy of NOTICE with your code.
+  - Package a copy of LICENCE with your code.
+  - Package a copy of NOTICE with your code.
 - You may modify the source code.
--- If you modify a file, you must state this prominently in the file (i.e. in a comment at the top).
--- Any modified code may use a different licence.
--- Any unmodified code must carry the same Apache 2.0 licence.
+  - If you modify a file, you must state this prominently in the file (i.e. in a comment at the top).
+  - Any modified code may use a different licence.
+  - Any unmodified code must carry the same Apache 2.0 licence.
 - You may not use any trademarks owned by the licensor.
+
+## The Future
+
+At the moment there are no additional features planned.
+For now, future changes will consist solely of:
+- Fixing Bugs
+- Eradicating Warnings
+- Adding Better Documentation
+
+However, better support for pre-C++11 compilers may be investigated if there is found to be sufficient demand for it.
 
 ## Contents
 This library supplies two core types and sixteen type aliases.
@@ -55,18 +69,33 @@ The common aliases are provided by `FixedPointsCommon.h`.
 
 ([About Q Format](https://en.wikipedia.org/wiki/Q_(number_format)).)
 
+### Operators:
+
+- `+`: adds two `UFixedPoint`s or two `FixedPoint`s
+- `-`: subtracts two `UFixedPoint`s or two `FixedPoint`s
+- `*`: multiplies two `UFixedPoint`s or two `FixedPoint`s
+- `/`: divides two `UFixedPoint`s or two `FixedPoint`s
+- `==`: compares two `UFixedPoint`s or two `FixedPoint`s
+- `!=`: compares two `UFixedPoint`s or two `FixedPoint`s
+- `<`: compares two `UFixedPoint`s or two `FixedPoint`s
+- `<=`: compares two `UFixedPoint`s or two `FixedPoint`s
+- `>`: compares two `UFixedPoint`s or two `FixedPoint`s
+- `>=`: compares two `UFixedPoint`s or two `FixedPoint`s
+
 ### Free Functions:
 
 - `Floor`: The floor operation.
 - `Ceil`: The Ceiling operation
 - `Round`: Rounding operation.
 - `Signbit`: Returns `true` for signed numbers and `false` for unsigned numbers.
+- `Multiply`: multiplies two `UFixedPoint`s or two `FixedPoint`s, returns a result that is twice the resolution of the input.
 
 ### Member Functions:
 
 - `UFixedPoint<I, F>::GetInteger`: Gets the integer part of an unsigned fixed point.
 - `UFixedPoint<I, F>::GetFraction`: Gets the fractional part of an unsigned fixed point.
 - `UFixedPoint<I, F>::GetInternal`: Gets the internal representation of an unsigned fixed point.
+
 - `FixedPoint<I, F>::GetInteger`: Gets the integer part of a signed fixed point.
 - `FixedPoint<I, F>::GetFraction`: Gets the fractional part of a signed fixed point.
 - `FixedPoint<I, F>::GetInternal`: Gets the internal representation of a signed fixed point.
