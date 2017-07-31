@@ -47,7 +47,7 @@ void TestQ8x8(void)
 void TestSQ7x8(void)
 {
 
-	Serial.println(F("The size of SQ78x8 on your system is:"));
+	Serial.println(F("The size of SQ7x8 on your system is:"));
 	Serial.println(sizeof(SQ7x8));
 	Serial.println();
 	
